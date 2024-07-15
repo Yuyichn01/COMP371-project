@@ -47,6 +47,25 @@ public:
             		size = 0;
         	}
 	}
+
+	T getElement(int index) const {
+		if (index >= 0 && index < size) {
+			return array[index];
+		}
+		else {
+			cout << "Invalid index.\n";
+			return T();
+		}
+	}
+
+	void setElement(int index, T value) {
+		if (index >= 0 && index < size) {
+			array[index] = value;
+		}
+		else {
+			cout << "Invalid index.\n";
+		}
+	}
 };
 
 int main() {
