@@ -14,8 +14,9 @@ public:
 	}
 
 	~Array() {
-		delete[] array;
-	}
+	        if (array != nullptr)
+            		delete[] array;
+    	}
 
 	void initializeArray() {
 		for (int i = 0; i < size; i++) {
@@ -24,6 +25,10 @@ public:
 	}
 
 	void printArray() {
+		if (array == nullptr) {
+            		cout << "Array is empty or has been deleted.\n";
+            		return;
+        	}
 		cout << "[";
 		for (int i = 0; i < size; i++) {
 			if (i == size - 1) {
@@ -33,6 +38,14 @@ public:
 				cout << array[i] << ", ";
 		}
 		cout << "]\n";
+	}
+
+	void deleteArray() {
+		if (array != nullptr) {
+            		delete[] array;
+            		array = nullptr;
+            		size = 0;
+        	}
 	}
 };
 
@@ -45,6 +58,8 @@ int main() {
 	Array<int> array(size);
 	array.initializeArray();
 	array.printArray();
-
+	array.deleteArray();
+	array.printArray();
+	
 	return 0;
 }
