@@ -2,35 +2,39 @@
 using namespace std;
 
 template <typename T>
-T* createArray(int size) {
-	T* array = new T[size];
-	return array;
-}
+class Array {
+private:
+	T* array;
+	int size;
 
-template <typename T>
-void initializeArray(T* array,  int size) {
-	for (int i = 0; i < size; i++) {
-		array[i] = T(i);
+public:
+	Array(int size) {
+		this->size = size;
+		array = new T[size];
 	}
-}
 
-template <typename T>
-void printArray(T* array, int size) {
-	cout << "[";
-	for (int i = 0; i < size; i++) {
-		if (i == size - 1) {
-			cout << array[i];
-		} 
-		else
-			cout << array[i] << ", ";
+	~Array() {
+		delete[] array;
 	}
-	cout << "]";
-}
 
-template <typename T>
-void deleteArray(T* array) {
-	// TO BE IMPLEMENTED
-}
+	void initializeArray() {
+		for (int i = 0; i < size; i++) {
+			array[i] = T(i);
+		}
+	}
+
+	void printArray() {
+		cout << "[";
+		for (int i = 0; i < size; i++) {
+			if (i == size - 1) {
+				cout << array[i];
+			}
+			else
+				cout << array[i] << ", ";
+		}
+		cout << "]\n";
+	}
+};
 
 int main() {
 
@@ -38,8 +42,9 @@ int main() {
 	cout << "Enter size of array: ";
 	cin >> size;
 
-	int* array = createArray<int>(size);
-	initializeArray(array, size);
-	printArray(array, size);
-	deleteArray(array);
+	Array<int> array(size);
+	array.initializeArray();
+	array.printArray();
+
+	return 0;
 }
