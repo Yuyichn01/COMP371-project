@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 class Point {
 private:
@@ -26,4 +27,9 @@ public:
     void display() const {
         std::cout << "(" << x << ", " << y << ", " << z << ")";
     }
+
+    // Getters for the coordinates (needed for Triangle calculations)
+    int getX() const { return x; }
+    int getY() const { return y; }
+    int getZ() const { return z; }
 };
