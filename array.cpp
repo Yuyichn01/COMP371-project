@@ -9,13 +9,16 @@ private:
 
 public:
 	Array(int size) {
+		while (size < 0) {
+			cout << "Invalid Size. Enter size of array: ";
+			cin >> size;
+		}
 		this->size = size;
-		array = new T[size];
+		array = new T[this->size];
 	}
 
 	~Array() {
-	        if (array != nullptr)
-            		delete[] array;
+	        deleteArray();
     	}
 
 	void initializeArray() {
@@ -24,7 +27,7 @@ public:
 		}
 	}
 
-	void printArray() {
+	void printArray() const{
 		if (array == nullptr) {
             		cout << "Array is empty or has been deleted.\n";
             		return;
