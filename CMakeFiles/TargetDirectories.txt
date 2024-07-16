@@ -1,0 +1,3 @@
+/Users/yuyi/CLionProjects/COMP371-project/CMakeFiles/COMP371_project.dir
+/Users/yuyi/CLionProjects/COMP371-project/CMakeFiles/edit_cache.dir
+/Users/yuyi/CLionProjects/COMP371-project/CMakeFiles/rebuild_cache.dir

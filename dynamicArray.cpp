@@ -1,4 +1,11 @@
 #include <iostream>
+using namespace std;
+
+/*
+ This is an implementation of amortized dynamic arrayThis method expands and contracts the array based on its usage.
+ The array's capacity is doubled when it is full and halved when the number of elements is less than a quarter of the capacity.
+ This method ensures that the array does not use excessive memory.
+ */
 
 // Template class for a dynamic array with amortized doubling and halving
 template <typename T>
@@ -68,27 +75,45 @@ public:
 
 // Main function to test the DynamicArray class
 int main() {
-    int size;
-    cout << "Enter size of array: ";
+    size_t initialCapacity, numberOfElements;
+    int element;
 
-    DynamicArray<int> arr;
-    arr.add(1);
-    arr.add(2);
-    arr.add(3);
-    arr.add(4);
+    std::cout << "Enter the initial capacity of the array: ";
+    std::cin >> initialCapacity;
 
+    DynamicArray<int> arr(initialCapacity);
+
+    std::cout << "Enter the number of elements to add: ";
+    std::cin >> numberOfElements;
+
+    for (size_t i = 0; i < numberOfElements; ++i) {
+        std::cout << "Enter element " << (i + 1) << ": ";
+        std::cin >> element;
+        arr.add(element);
+    }
+
+    std::cout << "Array elements after adding:" << std::endl;
     for (size_t i = 0; i < arr.getSize(); ++i) {
         std::cout << arr.get(i) << " "; // Print all elements in the array
     }
     std::cout << std::endl;
 
-    arr.remove();
-    arr.remove();
+    size_t numberOfRemovals;
+    std::cout << "Enter the number of elements to remove: ";
+    std::cin >> numberOfRemovals;
 
+    for (size_t i = 0; i < numberOfRemovals; ++i) {
+        arr.remove();
+    }
+
+    std::cout << "Array elements after removing:" << std::endl;
     for (size_t i = 0; i < arr.getSize(); ++i) {
-        std::cout << arr.get(i) << " "; // Print remaining elements after removal
+        std::cout << arr.get(i) << " "; // Print the remaining elements in the array after removal
     }
     std::cout << std::endl;
+
+    std::cout << "Current array size: " << arr.getSize() << std::endl; // Print the current size of the array
+    std::cout << "Current array capacity: " << arr.getCapacity() << std::endl; // Print the current capacity of the array
 
     return 0;
 }

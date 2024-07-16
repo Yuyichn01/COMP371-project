@@ -7,4 +7,6 @@ include_directories(.)
 
 add_executable(COMP371_project
         Test.cpp
-        Test.h)
+        Test.h
+
+)
