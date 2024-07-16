@@ -70,7 +70,7 @@ public:
 int main() {
     int size;
     cout << "Enter size of array: ";
-    cin >> size;
+
     DynamicArray<int> arr;
     arr.add(1);
     arr.add(2);
