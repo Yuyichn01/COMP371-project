@@ -75,39 +75,17 @@ public:
 			cout << "Invalid size. Size cannot be negative." << endl;
 			return;
 		}
-	
+
 		T* newArray = new T[newSize];
 		int elementsToCopy = (newSize < size) ? newSize : size;
-	
+
 		for (int i = 0; i < elementsToCopy; i++) {
 			newArray[i] = array[i];
 		}
-	
+
 		deleteArray();
 		array = newArray;
 		size = newSize;
 }
 };
 
-int main() {
-
-	int size;
-	cout << "Enter size of array: ";
-	cin >> size;
-
-	Array<int> array(size);
-	array.initializeArray();
-	array.printArray();
-
-	int newSize;
-	cout << "Enter new size of array: ";
-	cin >> newSize;
-	
-	array.resize(newSize);
-	array.printArray();
-	
-	array.deleteArray();
-	array.printArray();
-	
-	return 0;
-}

@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Point.h"
 #include "Triangle.h"
+#include "Array.cpp"
+using namespace std;
 
 // Function to display the menu options
 void menu() {
@@ -13,7 +15,25 @@ void menu() {
 }
 
 int main() {
-    Point *p1 = nullptr, *p2 = nullptr, *p3 = nullptr;  // Pointers to Points for the vertices
+    int size;
+    cout << "Enter size of array: ";
+    cin >> size;
+
+    Array<int> array(size);
+    array.initializeArray();
+    array.printArray();
+
+    int newSize;
+    cout << "Enter new size of array: ";
+    cin >> newSize;
+
+    array.resize(newSize);
+    array.printArray();
+
+    array.deleteArray();
+    array.printArray();
+
+    /*Point *p1 = nullptr, *p2 = nullptr, *p3 = nullptr;  // Pointers to Points for the vertices
     Triangle *triangle = nullptr;  // Pointer to the Triangle
     int choice, d;
     char axis;
@@ -86,6 +106,7 @@ int main() {
 
     // Clean up dynamically allocated memory
     delete triangle;
+     */
 
     return 0;
 }
