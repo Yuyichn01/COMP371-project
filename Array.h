@@ -19,6 +19,8 @@ public:
     
     T getElement(int index) const;
     void setElement(int index, T value);
+
+    void resize(int newSize);
 };
 
 #endif
