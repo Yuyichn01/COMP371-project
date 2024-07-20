@@ -1,6 +1,5 @@
 #include <iostream>
-#include "Point.h"
-#include "Triangle.h"
+#include "Triangle.cpp"
 #include "Array.cpp"
 using namespace std;
 
@@ -8,7 +7,7 @@ using namespace std;
 void menu() {
     std::cout << "Menu:\n";
     std::cout << "1. Create Triangle\n";
-    std::cout << "2. Translate Triangle\n";
+    std::cout << "2. Shift Triangle\n";
     std::cout << "3. Display Triangle\n";
     std::cout << "4. Calculate Area\n";
     std::cout << "5. Exit\n";
@@ -33,7 +32,7 @@ int main() {
     array.deleteArray();
     array.printArray();
 
-    /*Point *p1 = nullptr, *p2 = nullptr, *p3 = nullptr;  // Pointers to Points for the vertices
+    Point *p1 = nullptr, *p2 = nullptr, *p3 = nullptr;  // Pointers to Points for the vertices
     Triangle *triangle = nullptr;  // Pointer to the Triangle
     int choice, d;
     char axis;
@@ -64,12 +63,12 @@ int main() {
             }
             case 2:
                 // Translate Triangle
-                std::cout << "Enter distance to translate: ";
+                std::cout << "Enter distance to shift: ";
                 std::cin >> d;
                 std::cout << "Enter axis (x, y, z): ";
                 std::cin >> axis;
                 if (triangle) {
-                    triangle->translate(d, axis);  // Translate the Triangle if it exists
+                    triangle->shift(d, axis);  // Shift the Triangle if it exists
                 } else {
                     std::cout << "No triangle created yet.\n";
                 }
@@ -106,7 +105,6 @@ int main() {
 
     // Clean up dynamically allocated memory
     delete triangle;
-     */
 
     return 0;
 }

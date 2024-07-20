@@ -1,6 +1,5 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
-
 #include "Point.h"
 
 class Triangle {
