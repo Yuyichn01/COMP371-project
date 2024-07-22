@@ -8,7 +8,7 @@ private:
 	int size;
 
 public:
-	Array(int size) {
+	Array(int size = 0) {
 		while (size < 0) {
 			cout << "Invalid Size. Enter size of array: ";
 			cin >> size;
