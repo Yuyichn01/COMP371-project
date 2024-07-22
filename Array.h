@@ -10,7 +10,7 @@ private:
     int size;
 
 public:
-    Array(int size);
+    Array(int size = 0);
     ~Array();
     
     void initializeArray();
