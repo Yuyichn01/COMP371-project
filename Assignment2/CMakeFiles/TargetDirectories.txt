@@ -1,0 +1,3 @@
+/Users/yuyi/CLionProjects/Assignment2/CMakeFiles/OpenGLAssignment.dir
+/Users/yuyi/CLionProjects/Assignment2/CMakeFiles/edit_cache.dir
+/Users/yuyi/CLionProjects/Assignment2/CMakeFiles/rebuild_cache.dir
