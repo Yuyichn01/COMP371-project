@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

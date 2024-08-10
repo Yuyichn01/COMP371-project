@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162
+CMAKE_BINARY_DIR = /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/OpenGLAssignment.dir/clean
 CMakeFiles/OpenGLAssignment.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLAssignment.dir/build.make CMakeFiles/OpenGLAssignment.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLAssignment.dir/build.make CMakeFiles/OpenGLAssignment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/CMakeFiles --progress-num=1,2 "Built target OpenGLAssignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles --progress-num=1,2 "Built target OpenGLAssignment"
 .PHONY : CMakeFiles/OpenGLAssignment.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGLAssignment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGLAssignment.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGLAssignment.dir/rule
 
 # Convenience name for target.

@@ -47,23 +47,23 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     {
         switch (key)
         {
-            case GLFW_KEY_UP:
+            case GLFW_KEY_W:
                 offsetY += moveSpeed;
                 break;
-            case GLFW_KEY_DOWN:
+            case GLFW_KEY_S:
                 offsetY -= moveSpeed;
                 break;
-            case GLFW_KEY_LEFT:
+            case GLFW_KEY_A:
                 offsetX -= moveSpeed;
                 break;
-            case GLFW_KEY_RIGHT:
+            case GLFW_KEY_D:
                 offsetX += moveSpeed;
                 break;
             case GLFW_KEY_Q:
-                rotationAngle -= rotationSpeed;
+                rotationAngle += rotationSpeed;
                 break;
             case GLFW_KEY_E:
-                rotationAngle += rotationSpeed;
+                rotationAngle -= rotationSpeed;
                 break;
             case GLFW_KEY_R:
                 scaleFactor += scaleSpeed;
@@ -181,9 +181,9 @@ int main()
 
         // Create transformation matrix
         glm::mat4 transform = glm::mat4(1.0f);
-        transform = glm::translate(transform, glm::vec3(offsetX, offsetY, 0.0f));
-        transform = glm::rotate(transform, rotationAngle, glm::vec3(0.0f, 0.0f, 1.0f));
         transform = glm::scale(transform, glm::vec3(scaleFactor, scaleFactor, 1.0f));
+        transform = glm::rotate(transform, rotationAngle, glm::vec3(0.0f, 0.0f, 1.0f));
+        transform = glm::translate(transform, glm::vec3(offsetX, offsetY, 0.0f));
 
         // Update the transformation uniform
         GLint transformLocation = glGetUniformLocation(shaderProgram, "transform");

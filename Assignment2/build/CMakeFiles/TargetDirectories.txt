@@ -1,0 +1,3 @@
+/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles/OpenGLAssignment.dir
+/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles/edit_cache.dir
+/Users/yuyi/CLionProjects/COMP371A2_ClaireJing_40237037_ZiYiTu_40164574_YiYu_40164162/build/CMakeFiles/rebuild_cache.dir
