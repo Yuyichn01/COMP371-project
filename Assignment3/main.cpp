@@ -9,7 +9,7 @@
 #include <vector>
 
 // Window dimensions
-const GLuint WIDTH = 800, HEIGHT = 600;
+const GLuint WIDTH = 1920, HEIGHT = 1080;
 
 // Transformation variables
 glm::vec3 translation(0.0f, 0.0f, 0.0f);
@@ -112,7 +112,7 @@ int main() {
 
     // Load .obj file
     std::vector<glm::vec3> vertices;
-    if (!loadOBJ("path/to/your/model.obj", vertices)) {
+    if (!loadOBJ("model.obj", vertices)) {
         std::cerr << "Failed to load .obj file" << std::endl;
         return -1;
     }

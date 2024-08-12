@@ -26,3 +26,4 @@ include_directories(${GLM_INCLUDE_DIR})
 find_package(OpenGL REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIRS})
 target_link_libraries(OpenGLAssignment ${OPENGL_LIBRARIES})
+
